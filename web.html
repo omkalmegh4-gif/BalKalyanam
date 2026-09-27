@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BalKalyanam | Sada Shanti Balgruh</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =====================================================
+   BALKALYANAM - SINGLE FILE WEBSITE
+   SADA SHANTI BALGRUH
+   ===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f6fbfa;
+    color:#263238;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    background:rgba(27,60,57,.97);
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.nav-container{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    font-size:22px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.logo-icon{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#1abc9c;
+    font-size:22px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    list-style:none;
+}
+
+.nav-links button{
+    border:0;
+    background:transparent;
+    color:white;
+    padding:12px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links button:hover,
+.nav-links button.active{
+    background:#1abc9c;
+}
+
+.menu-btn{
+    display:none;
+    color:white;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* ================= PAGES ================= */
+
+.page{
+    display:none;
+    animation:pageIn .4s ease;
+}
+
+.page.active{
+    display:block;
+}
+
+@keyframes pageIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+
+    background:
+    linear-gradient(
+        rgba(15,55,50,.72),
+        rgba(15,55,50,.72)
+    ),
+    url("cep_orp_pho1.jpeg") center/cover;
+}
+
+.hero-content{
+    max-width:900px;
+    color:white;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:30px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    margin-bottom:22px;
+    font-weight:600;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,6vw,5rem);
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    display:block;
+    color:#6ff0cd;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+    border:0;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+    margin:5px;
+}
+
+.btn-primary{
+    background:#1abc9c;
+    color:white;
+    box-shadow:0 8px 20px rgba(26,188,156,.25);
+}
+
+.btn-primary:hover{
+    background:#159a80;
+    transform:translateY(-3px);
+}
+
+.btn-light{
+    background:white;
+    color:#17645a;
+}
+
+.btn-light:hover{
+    transform:translateY(-3px);
+}
+
+.btn-danger{
+    background:#e74c3c;
+    color:white;
+}
+
+.btn-secondary{
+    background:#34495e;
+    color:white;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    color:#1abc9c;
+    font-weight:800;
+    letter-spacing:2px;
+    font-size:13px;
+}
+
+.section-title h2{
+    color:#23433f;
+    font-size:38px;
+    margin:10px 0;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.intro img{
+    width:100%;
+    height:430px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.intro-text h2{
+    color:#23433f;
+    font-size:40px;
+    margin:10px 0 20px;
+}
+
+.intro-text p{
+    color:#555;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.location{
+    margin:20px 0;
+    font-weight:700;
+    color:#536b68;
+}
+
+/* ================= PHOTO GALLERY ================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.photo{
+    position:relative;
+    height:300px;
+    overflow:hidden;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.photo.large{
+    height:400px;
+    grid-row:span 2;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.photo:hover img{
+    transform:scale(1.08);
+}
+
+.photo-overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:25px;
+    color:white;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.85)
+    );
+}
+
+.photo-overlay h3{
+    font-size:20px;
+}
+
+.photo-overlay p{
+    margin-top:5px;
+}
+
+/* ================= SUPPORT CARDS ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.14);
+}
+
+.card-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#23433f;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    max-width:1200px;
+    margin:20px auto 80px;
+    padding:45px;
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        #164e63,
+        #1abc9c
+    );
+
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.cta h2{
+    font-size:32px;
+    margin:10px 0;
+}
+
+/* ================= PAGE HEADER ================= */
+
+.page-header{
+    padding:80px 20px;
+    text-align:center;
+    color:white;
+    background:linear-gradient(135deg,#23433f,#1abc9c);
+}
+
+.page-header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.page-header p{
+    font-size:17px;
+}
+
+/* ================= LOGIN / REGISTER ================= */
+
+.auth-page{
+    min-height:calc(100vh - 70px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:50px 20px;
+
+    background:
+    linear-gradient(
+        rgba(26,188,156,.12),
+        rgba(255,255,255,.7)
+    );
+}
+
+.auth-box{
+    width:100%;
+    max-width:480px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+.auth-box h2{
+    text-align:center;
+    color:#23433f;
+    margin-bottom:8px;
+}
+
+.auth-box .subtitle{
+    text-align:center;
+    color:#777;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:17px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:700;
+    margin-bottom:7px;
+    color:#37474f;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:13px 15px;
+    border:2px solid #e1e8e6;
+    border-radius:12px;
+    background:#fafdfc;
+    outline:none;
+    font-size:14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#1abc9c;
+    box-shadow:0 0 0 4px rgba(26,188,156,.1);
+}
+
+.full-btn{
+    width:100%;
+    margin:5px 0 15px;
+}
+
+.auth-switch{
+    text-align:center;
+    color:#666;
+}
+
+.auth-switch a{
+    color:#1abc9c;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* ================= DONATION ================= */
+
+.donation-tabs{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.donation-tabs button{
+    border:2px solid #1abc9c;
+    background:white;
+    color:#167c68;
+    padding:12px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.3s;
+}
+
+.donation-tabs button:hover,
+.donation-tabs button.active{
+    background:#1abc9c;
+    color:white;
+}
+
+.donation-content{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 12px 35px rgba(0,0,0,.09);
+}
+
+.donation-content h2{
+    color:#23433f;
+    margin-bottom:10px;
+}
+
+.need-box{
+    background:#eafaf6;
+    border-left:5px solid #1abc9c;
+    padding:18px;
+    border-radius:10px;
+    margin:20px 0;
+    line-height:1.7;
+}
+
+.food-note{
+    background:#fff7e6;
+    border-left:5px solid #f39c12;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+/* ================= CHECKBOX ================= */
+
+.check{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin:10px 0;
+}
+
+.check input{
+    accent-color:#1abc9c;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.about-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.about-card h3{
+    color:#1abc9c;
+    margin-bottom:12px;
+}
+
+.about-card p,
+.about-card li{
+    color:#555;
+    line-height:1.8;
+}
+
+.about-card ul{
+    padding-left:20px;
+}
+
+/* ================= TEAM ================= */
+
+.team-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.team-table th,
+.team-table td{
+    padding:13px;
+    border:1px solid #e3e8e7;
+    text-align:left;
+}
+
+.team-table th{
+    background:#1abc9c;
+    color:white;
+}
+
+.team-table tr:nth-child(even){
+    background:#f4fbf9;
+}
+
+/* ================= VOLUNTEER ================= */
+
+.volunteer-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.volunteer-card{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.volunteer-card i{
+    font-size:40px;
+    color:#1abc9c;
+    margin-bottom:15px;
+}
+
+.volunteer-card h3{
+    margin-bottom:10px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.contact-card{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact-card i{
+    font-size:35px;
+    color:#1abc9c;
+    margin-bottom:12px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#193b37;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer p{
+    margin:7px;
+}
+
+footer span{
+    color:#6ff0cd;
+}
+
+/* ================= POPUP ================= */
+
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:99999;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.popup.show{
+    display:flex;
+}
+
+.popup-box{
+    background:white;
+    width:100%;
+    max-width:500px;
+    padding:35px;
+    border-radius:25px;
+    position:relative;
+    animation:popupIn .3s ease;
+}
+
+@keyframes popupIn{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    border:0;
+    background:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* ================= SUCCESS MESSAGE ================= */
+
+.success{
+    display:none;
+    background:#e9faf3;
+    color:#147a5d;
+    border:1px solid #9de3cc;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:20px;
+    text-align:center;
+    font-weight:700;
+}
+
+.success.show{
+    display:block;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        right:0;
+        background:#193b37;
+        flex-direction:column;
+        padding:15px;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .nav-links button{
+        width:100%;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .intro{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .volunteer-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        min-height:580px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .section{
+        padding:55px 15px;
+    }
+
+    .intro{
+        padding:55px 15px;
+    }
+
+    .intro img{
+        height:300px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .photo.large{
+        height:300px;
+        grid-row:auto;
+    }
+
+    .photo{
+        height:260px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .auth-box,
+    .donation-content{
+        padding:25px 20px;
+    }
+
+    .page-header h1{
+        font-size:34px;
+    }
+
+    .team-table{
+        font-size:12px;
+    }
+
+    .team-table th,
+    .team-table td{
+        padding:8px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<div class="logo" onclick="openPage('home')">
+    <div class="logo-icon">💚</div>
+    <span>बालकल्याणम्</span>
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<button onclick="openPage('home')">
+<i class="fas fa-home"></i> Home
+</button>
+</li>
+
+<li>
+<button onclick="openPage('donate')">
+<i class="fas fa-heart"></i> Donate
+</button>
+</li>
+
+<li>
+<button onclick="openPage('about')">
+<i class="fas fa-building"></i> About Us
+</button>
+</li>
+
+<li>
+<button onclick="openPage('volunteer')">
+<i class="fas fa-hands-helping"></i> Volunteer
+</button>
+</li>
+
+<li>
+<button onclick="openFeedback()">
+<i class="fas fa-star"></i> Feedback
+</button>
+</li>
+
+<li>
+<button onclick="openPage('contact')">
+<i class="fas fa-phone"></i> Contact
+</button>
+</li>
+
+<li>
+<button onclick="openPage('login')">
+<i class="fas fa-user"></i> Login
+</button>
+</li>
+
+</ul>
+
+</div>
+</nav>
+
+
+<!-- =====================================================
+     HOME PAGE
+     ===================================================== -->
+
+<section id="home" class="page active">
+
+<div class="hero">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+💚 Supporting Sada Shanti Balgruh
+</div>
+
+<h1>
+Every Child Deserves
+<span>Love, Care & Hope</span>
+</h1>
+
+<p>
+BalKalyanam is a dedicated platform created to support
+<strong>Sada Shanti Balgruh, Amravati</strong>.
+Connect, donate and volunteer to help provide essential
+resources and opportunities.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn btn-primary"
+onclick="openPage('donate')">
+💝 Donate Now
+</button>
+
+<button class="btn btn-light"
+onclick="openPage('about')">
+🏢 Know More
+</button>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+<div>
+<img src="cep_orp_pho1.jpeg"
+alt="Sada Shanti Balgruh"
+loading="lazy">
+</div>
+
+<div class="intro-text">
+
+<span class="section-title">
+<span>OUR FOCUS</span>
+</span>
+
+<h2>Sada Shanti Balgruh</h2>
+
+<p>
+BalKalyanam focuses on supporting one orphanage —
+<strong>Sada Shanti Balgruh</strong>.
+Our goal is to make it easier for people to understand
+the actual requirements of the orphanage and provide
+useful support.
+</p>
+
+<div class="location">
+📍 Amravati, Maharashtra
+</div>
+
+<button class="btn btn-primary"
+onclick="openPage('donate')">
+Support Sada Shanti →
+</button>
+
+</div>
+
+</div>
+
+
+<!-- GALLERY -->
+
+<div class="section">
+
+<div class="section-title">
+
+<span>📸 OUR ORPHANAGE</span>
+
+<h2>Life at Sada Shanti</h2>
+
+<p>
+A glimpse of the environment, campus and activities
+connected with Sada Shanti Balgruh.
+</p>
+
+</div>
+
+<div class="gallery">
+
+<div class="photo large">
+
+<img src="cep_orp_pho1.jpeg"
+alt="Sada Shanti Orphanage">
+
+<div class="photo-overlay">
+<h3>Sada Shanti Balgruh</h3>
+<p>Our Home</p>
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<img src="cep_orp_pho2.jpg"
+alt="Sada Shanti activities">
+
+<div class="photo-overlay">
+<h3>Community Support</h3>
+<p>Volunteers & Teachers</p>
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<img src="cep_orp_pho3.jpeg"
+alt="Sada Shanti campus">
+
+<div class="photo-overlay">
+<h3>Our Environment</h3>
+<p>A caring place to grow</p>
+</div>
+
+</div>
+
+
+<div class="photo">
+
+<img src="cep_orp_pho4.jpeg"
+alt="Sada Shanti management">
+
+<div class="photo-overlay">
+<h3>Management Team</h3>
+<p>Working together</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SUPPORT -->
+
+<div class="section">
+
+<div class="section-title">
+
+<span>💚 MAKE AN IMPACT</span>
+
+<h2>How You Can Help</h2>
+
+<p>
+Choose the way you want to support Sada Shanti.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card" onclick="openPage('donate')">
+<div class="card-icon">🍱</div>
+<h3>Food</h3>
+<p>
+Support food requirements through
+suitable food donations.
+</p>
+</div>
+
+
+<div class="card" onclick="openPage('donate')">
+<div class="card-icon">👗</div>
+<h3>Clothes</h3>
+<p>
+Donate useful clothing according
+to requirements.
+</p>
+</div>
+
+
+<div class="card" onclick="openPage('donate')">
+<div class="card-icon">📚</div>
+<h3>Education</h3>
+<p>
+Help provide stationery and
+study materials.
+</p>
+</div>
+
+
+<div class="card" onclick="openPage('volunteer')">
+<div class="card-icon">🤝</div>
+<h3>Volunteer</h3>
+<p>
+Contribute your time and
+skills.
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CTA -->
+
+<div class="cta">
+
+<div>
+
+<span>💝 TOGETHER WE CAN HELP</span>
+
+<h2>Support Sada Shanti Balgruh</h2>
+
+<p>
+Even a small contribution can make a meaningful difference.
+</p>
+
+</div>
+
+<button class="btn btn-light"
+onclick="openPage('donate')">
+Donate Now →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     REGISTER PAGE
+     ==================================================== -->
+
+<section id="register" class="page">
+
+<div class="auth-page">
+
+<div class="auth-box">
+
+<h2>Create Account 💚</h2>
+
+<p class="subtitle">
+Join BalKalyanam and support Sada Shanti.
+</p>
+
+<div id="registerSuccess" class="success">
+Registration successful! You can now login.
+</div>
+
+<form id="registerForm">
+
+<div class="form-group">
+<label>Full Name</label>
+<input type="text"
+id="registerName"
+placeholder="Enter your name"
+required>
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input type="email"
+id="registerEmail"
+placeholder="Enter your email"
+required>
+</div>
+
+<div class="form-group">
+<label>Phone Number</label>
+<input type="tel"
+id="registerPhone"
+placeholder="10-digit mobile number"
+pattern="[0-9]{10}"
+required>
+</div>
+
+<div class="form-group">
+<label>Password</label>
+<input type="password"
+id="registerPassword"
+placeholder="Create password"
+required>
+</div>
+
+<button class="btn btn-primary full-btn"
+type="submit">
+<i class="fas fa-user-plus"></i>
+Register
+</button>
+
+</form>
+
+<p class="auth-switch">
+Already have an account?
+<a onclick="openPage('login')">Login</a>
+</p>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     LOGIN PAGE
+     ===================================================== -->
+
+<section id="login" class="page">
+
+<div class="auth-page">
+
+<div class="auth-box">
+
+<h2>Welcome Back 💚</h2>
+
+<p class="subtitle">
+Login to BalKalyanam.
+</p>
+
+<div id="loginSuccess" class="success">
+Login successful!
+</div>
+
+<form id="loginForm">
+
+<div class="form-group">
+<label>Email</label>
+<input type="email"
+id="loginEmail"
+placeholder="Enter email"
+required>
+</div>
+
+<div class="form-group">
+<label>Password</label>
+<input type="password"
+id="loginPassword"
+placeholder="Enter password"
+required>
+</div>
+
+<button class="btn btn-primary full-btn"
+type="submit">
+<i class="fas fa-sign-in-alt"></i>
+Login
+</button>
+
+</form>
+
+<p class="auth-switch">
+Don't have an account?
+<a onclick="openPage('register')">Register</a>
+</p>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     DONATION PAGE
+     ===================================================== -->
+
+<section id="donate" class="page">
+
+<div class="page-header">
+
+<h1>💝 Donate to Sada Shanti</h1>
+
+<p>
+Choose what you would like to donate.
+</p>
+
+</div>
+
+
+<div class="section">
+
+<div class="donation-tabs">
+
+<button class="active"
+onclick="selectDonation('food',this)">
+🍱 Food
+</button>
+
+<button onclick="selectDonation('money',this)">
+💰 Money
+</button>
+
+<button onclick="selectDonation('grocery',this)">
+🛒 Grocery
+</button>
+
+<button onclick="selectDonation('stationery',this)">
+✏️ Stationery
+</button>
+
+<button onclick="selectDonation('study',this)">
+📚 Study Material
+</button>
+
+<button onclick="selectDonation('clothes',this)">
+👗 Clothes
+</button>
+
+</div>
+
+
+<div class="donation-content">
+
+<div id="donationInfo"></div>
+
+<div id="donationSuccess"
+class="success">
+Donation request submitted successfully! 💚
+</div>
+
+<form id="donationForm">
+
+<div class="form-group">
+<label>Full Name *</label>
+<input type="text"
+id="donorName"
+placeholder="Your full name"
+required>
+</div>
+
+<div class="form-group">
+<label>Phone Number *</label>
+<input type="tel"
+id="donorPhone"
+placeholder="10-digit mobile number"
+pattern="[0-9]{10}"
+required>
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input type="email"
+id="donorEmail"
+placeholder="Your email">
+</div>
+
+<div id="dynamicFields"></div>
+
+<div class="form-group">
+<label>Additional Notes</label>
+
+<textarea
+id="donorNotes"
+rows="3"
+placeholder="Any additional information..."></textarea>
+
+</div>
+
+<div class="form-group">
+
+<label class="check">
+
+<input type="checkbox" required>
+
+I confirm that the information provided is correct.
+
+</label>
+
+</div>
+
+<button class="btn btn-primary full-btn"
+type="submit">
+
+<i class="fas fa-paper-plane"></i>
+
+Submit Donation
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT PAGE
+     ===================================================== -->
+
+<section id="about" class="page">
+
+<div class="page-header">
+
+<h1>🏢 About Us</h1>
+
+<p>Learn about BalKalyanam and Sada Shanti Balgruh.</p>
+
+</div>
+
+
+<div class="section">
+
+<div class="about-grid">
+
+
+<div class="about-card">
+
+<h3>🌱 Overview</h3>
+
+<p>
+BalKalyanam is a social-support platform created to
+connect donors and volunteers with
+<strong>Sada Shanti Balgruh</strong>.
+The purpose is to make support more organized,
+transparent and useful.
+</p>
+
+</div>
+
+
+<div class="about-card">
+
+<h3>🎯 Our Mission</h3>
+
+<ul>
+<li>Connect supporters with Sada Shanti.</li>
+<li>Encourage need-based donations.</li>
+<li>Support education and basic requirements.</li>
+<li>Encourage volunteering.</li>
+<li>Build community participation.</li>
+</ul>
+
+</div>
+
+
+<div class="about-card">
+
+<h3>👁️ Our Vision</h3>
+
+<p>
+To create a caring community where children receive
+the resources, education, encouragement and
+opportunities they need for a brighter future.
+</p>
+
+</div>
+
+
+<div class="about-card">
+
+<h3>💚 Why BalKalyanam?</h3>
+
+<p>
+Instead of making donations without knowing the
+actual requirements, BalKalyanam helps supporters
+choose specific categories such as food, money,
+grocery, stationery, study materials and clothes.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="about-card" style="margin-top:25px">
+
+<h3>👥 Our Team</h3>
+
+<div style="overflow-x:auto">
+
+<table class="team-table">
+
+<tr>
+<th>Name</th>
+<th>Role</th>
+</tr>
+
+<tr>
+<td>Om Kalmegh</td>
+<td>Technical Team</td>
+</tr>
+
+<tr>
+<td>Parth Wankhade</td>
+<td>Technical Team</td>
+</tr>
+
+<tr>
+<td>Sarthak Thakare</td>
+<td>Technical Team</td>
+</tr>
+
+<tr>
+<td>Vansh Kohale</td>
+<td>Technical Team</td>
+</tr>
+
+<tr>
+<td>Sudhanshu Deshmukh</td>
+<td>Technical Team</td>
+</tr>
+
+<tr>
+<td>Riddhi Thakare</td>
+<td>Technical Team</td>
+</tr>
+
+<tr>
+<td>Dnyaneshwari Kuche</td>
+<td>Technical Team</td>
+</tr>
+
+<tr>
+<td>Hindavi Tekade</td>
+<td>Technical Team</td>
+</tr>
+
+<tr>
+<td>Sharwari Sakharwade</td>
+<td>Technical Team</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     VOLUNTEER PAGE
+     ===================================================== -->
+
+<section id="volunteer" class="page">
+
+<div class="page-header">
+
+<h1>🤝 Become a Volunteer</h1>
+
+<p>
+Your time and skills can make a difference.
+</p>
+
+</div>
+
+
+<div class="section">
+
+<div class="volunteer-grid">
+
+<div class="volunteer-card">
+
+<i class="fas fa-book"></i>
+
+<h3>Education</h3>
+
+<p>
+Help children with studies,
+reading and learning activities.
+</p>
+
+</div>
+
+
+<div class="volunteer-card">
+
+<i class="fas fa-calendar-check"></i>
+
+<h3>Events</h3>
+
+<p>
+Help organize educational and
+community activities.
+</p>
+
+</div>
+
+
+<div class="volunteer-card">
+
+<i class="fas fa-users"></i>
+
+<h3>Community</h3>
+
+<p>
+Help spread awareness and
+connect more supporters.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="donation-content">
+
+<div id="volunteerSuccess" class="success">
+Volunteer registration submitted successfully! 💚
+</div>
+
+<form id="volunteerForm">
+
+<div class="form-group">
+
+<label>Full Name *</label>
+
+<input type="text"
+placeholder="Your full name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Email *</label>
+
+<input type="email"
+placeholder="Your email"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Phone *</label>
+
+<input type="tel"
+placeholder="10-digit mobile number"
+pattern="[0-9]{10}"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>How would you like to help?</label>
+
+<select required>
+
+<option value="">Select area</option>
+<option>Education Support</option>
+<option>Event Support</option>
+<option>Food Distribution</option>
+<option>Donation Collection</option>
+<option>Technical Support</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Message</label>
+
+<textarea rows="4"
+placeholder="Tell us how you would like to contribute..."></textarea>
+
+</div>
+
+
+<button class="btn btn-primary full-btn"
+type="submit">
+
+<i class="fas fa-hand-holding-heart"></i>
+
+Register as Volunteer
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT PAGE
+     ===================================================== -->
+
+<section id="contact" class="page">
+
+<div class="page-header">
+
+<h1>📞 Contact Us</h1>
+
+<p>Connect with BalKalyanam.</p>
+
+</div>
+
+
+<div class="section">
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<i class="fas fa-map-marker-alt"></i>
+
+<h3>Location</h3>
+
+<p>
+Sada Shanti Balgruh<br>
+Amravati, Maharashtra
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<i class="fas fa-envelope"></i>
+
+<h3>Email</h3>
+
+<p>
+omkalmegh4@gmail.com
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<i class="fas fa-phone"></i>
+
+<h3>Phone</h3>
+
+<p>
++91 9359642135
+</p>
+
+</div>
+
+</div>
+
+
+<div class="donation-content">
+
+<div id="contactSuccess"
+class="success">
+Your message has been submitted successfully! 💚
+</div>
+
+<form id="contactForm">
+
+<div class="form-group">
+
+<label>Name *</label>
+
+<input type="text"
+placeholder="Your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Email *</label>
+
+<input type="email"
+placeholder="Your email"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Subject *</label>
+
+<input type="text"
+placeholder="Subject"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Message *</label>
+
+<textarea rows="5"
+placeholder="Your message"
+required></textarea>
+
+</div>
+
+
+<button class="btn btn-primary full-btn"
+type="submit">
+
+<i class="fas fa-paper-plane"></i>
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FEEDBACK POPUP
+     ===================================================== -->
+
+<div class="popup" id="feedbackPopup">
+
+<div class="popup-box">
+
+<button class="close"
+onclick="closeFeedback()">
+&times;
+</button>
+
+<h2 style="color:#23433f;margin-bottom:10px">
+⭐ Give Your Feedback
+</h2>
+
+<p style="color:#777;margin-bottom:20px">
+Your feedback helps us improve BalKalyanam.
+</p>
+
+<div id="feedbackSuccess"
+class="success">
+Thank you for your valuable feedback! 💚
+</div>
+
+<form id="feedbackForm">
+
+<div class="form-group">
+
+<label>Your Name</label>
+
+<input type="text"
+placeholder="Your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Rating</label>
+
+<select required>
+
+<option value="">Select rating</option>
+<option>⭐⭐⭐⭐⭐ Excellent</option>
+<option>⭐⭐⭐⭐ Very Good</option>
+<option>⭐⭐⭐ Good</option>
+<option>⭐⭐ Average</option>
+<option>⭐ Needs Improvement</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Your Feedback</label>
+
+<textarea rows="4"
+placeholder="Write your feedback..."
+required></textarea>
+
+</div>
+
+
+<button class="btn btn-primary full-btn"
+type="submit">
+
+Submit Feedback
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+<h2>बालकल्याणम्</h2>
+
+<p>
+Caring for Every Child
+</p>
+
+<p>
+Dedicated to supporting
+<span>Sada Shanti Balgruh</span>
+</p>
+
+<p>
+ 2026 BalKalyanam.
+</p>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT (SUPABASE LIBRARY + APP SCRIPT)
+     ===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+/* ================= 1. SUPABASE CLIENT INITIALIZATION ================= */
+const SUPABASE_URL = "https://bjqzwsrvzzvghdxsuqwk.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_5lwdQt_cFqYXACCkmZqIfw_abA0-54n";
+
+// Use supabaseClient to prevent name collision with window.supabase
+let supabaseClient = null;
+if (typeof supabase !== "undefined" && supabase.createClient) {
+    supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+} else if (window.supabase && window.supabase.createClient) {
+    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+
+/* ================= 2. PAGE NAVIGATION ================= */
+function openPage(pageId){
+    // Hide all pages
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    // Show the requested page
+    const targetPage = document.getElementById(pageId);
+    if(targetPage){
+        targetPage.classList.add("active");
+    }
+
+    // Update active state in navbar buttons
+    document.querySelectorAll(".nav-links button").forEach(btn => {
+        btn.classList.remove("active");
+        const onclickAttr = btn.getAttribute("onclick") || "";
+        if (onclickAttr.includes(`'${pageId}'`)) {
+            btn.classList.add("active");
+        }
+    });
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    const navLinks = document.getElementById("navLinks");
+    if (navLinks) navLinks.classList.remove("show");
+}
+
+/* ================= 3. MOBILE MENU ================= */
+function toggleMenu(){
+    const navLinks = document.getElementById("navLinks");
+    if (navLinks) navLinks.classList.toggle("show");
+}
+
+/* ================= 4. DONATION TABS DATA ================= */
+const donationData = {
+food:{
+title:"🍱 Food Donation",
+description:"Support Sada Shanti with safe and suitable food donations.",
+info:"Food can include suitable surplus food from hotels, messes, canteens or marriage functions. Food should be fresh, hygienically prepared and safe to consume.",
+fields:`
+<div class="food-note">
+<strong>Important:</strong>
+Please donate only fresh, safe and hygienically packed food. Avoid stale or spoiled food.
+</div>
+<div class="form-group">
+<label>Food Source *</label>
+<select required>
+<option value="">Select source</option>
+<option>Hotel</option>
+<option>Mess</option>
+<option>Canteen</option>
+<option>Marriage / Function</option>
+<option>Home</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-group">
+<label>Food Type *</label>
+<input type="text" placeholder="Example: Rice, Dal, Vegetables" required>
+</div>
+<div class="form-group">
+<label>Approximate Quantity *</label>
+<input type="text" placeholder="Example: 20 meals / 10 kg" required>
+</div>
+<div class="form-group">
+<label>Preparation / Collection Time</label>
+<input type="datetime-local">
+</div>
+`
+},
+
+money:{
+title:"💰 Money Donation",
+description:"Financial support can help meet the current requirements of Sada Shanti.",
+info:"Financial donations may be used according to the orphanage's genuine requirements.",
+fields:`
+<div class="form-group">
+<label>Donation Amount *</label>
+<input type="number" min="1" placeholder="Enter amount" required>
+</div>
+<div class="form-group">
+<label>Payment Method *</label>
+<select required>
+<option value="">Select method</option>
+<option>UPI</option>
+<option>Bank Transfer</option>
+<option>Other</option>
+</select>
+</div>
+<div class="need-box">
+<strong>Donation Process</strong><br>
+After submitting your donation request, payment details can be verified with the orphanage.
+</div>
+`
+},
+
+grocery:{
+title:"🛒 Grocery Donation",
+description:"Help provide everyday grocery requirements.",
+info:"Useful grocery items can support regular kitchen and household requirements.",
+fields:`
+<div class="form-group">
+<label>Grocery Items *</label>
+<textarea rows="3" placeholder="Example: Rice, Wheat, Dal, Oil, Sugar..." required></textarea>
+</div>
+<div class="form-group">
+<label>Quantity *</label>
+<input type="text" placeholder="Example: 10 kg rice, 5 kg dal" required>
+</div>
+<div class="form-group">
+<label>Delivery Method *</label>
+<select required>
+<option>Self Delivery</option>
+<option>Pickup Required</option>
+</select>
+</div>
+`
+},
+
+stationery:{
+title:"✏️ Stationery Donation",
+description:"Support educational needs through stationery.",
+info:"Stationery can include notebooks, pens, pencils, geometry boxes and other useful school supplies.",
+fields:`
+<div class="form-group">
+<label>Stationery Items *</label>
+<textarea rows="3" placeholder="Example: Notebooks, Pens, Pencils..." required></textarea>
+</div>
+<div class="form-group">
+<label>Quantity *</label>
+<input type="text" placeholder="Example: 20 notebooks" required>
+</div>
+<div class="form-group">
+<label>New or Used *</label>
+<select required>
+<option>New</option>
+<option>Gently Used</option>
+</select>
+</div>
+`
+},
+
+study:{
+title:"📚 Study Material",
+description:"Help students with useful educational materials.",
+info:"Study materials may include textbooks, reference books, educational charts and learning resources.",
+fields:`
+<div class="form-group">
+<label>Material Type *</label>
+<select required>
+<option>Textbooks</option>
+<option>Reference Books</option>
+<option>Notebooks</option>
+<option>Educational Charts</option>
+<option>Learning Materials</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-group">
+<label>Subject / Class</label>
+<input type="text" placeholder="Example: Mathematics / Class 8">
+</div>
+<div class="form-group">
+<label>Quantity *</label>
+<input type="number" min="1" placeholder="Number of items" required>
+</div>
+`
+},
+
+clothes:{
+title:"👗 Clothes Donation",
+description:"Donate suitable clothing for girls at Sada Shanti.",
+info:"Clothes should be clean, usable and appropriate. New clothes are preferred, while gently used clothes should be in good condition.",
+fields:`
+<div class="form-group">
+<label>Clothing Type *</label>
+<select required>
+<option>Dress / Frock</option>
+<option>Kurti / Top</option>
+<option>Leggings</option>
+<option>Jeans</option>
+<option>Skirt</option>
+<option>T-Shirt</option>
+<option>Sweater</option>
+<option>Jacket</option>
+<option>Nightwear</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-group">
+<label>Size *</label>
+<select required>
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+</div>
+<div class="form-group">
+<label>Quantity *</label>
+<input type="number" min="1" placeholder="Number of pieces" required>
+</div>
+<div class="form-group">
+<label>Condition *</label>
+<div class="check">
+<input type="radio" name="clothingCondition" checked required> New
+</div>
+<div class="check">
+<input type="radio" name="clothingCondition"> Gently Used
+</div>
+</div>
+`
+}
+};
+
+/* ================= 5. DONATION TAB SELECTOR ================= */
+let currentDonation = "food";
+
+function selectDonation(type, button){
+    currentDonation = type;
+
+    document.querySelectorAll(".donation-tabs button").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    if (button) button.classList.add("active");
+
+    const data = donationData[type];
+    if (data) {
+        document.getElementById("donationInfo").innerHTML = `
+            <h2>${data.title}</h2>
+            <p style="color:#666;margin-top:8px">${data.description}</p>
+            <div class="need-box">
+                <strong>Requirements:</strong><br>${data.info}
+            </div>
+        `;
+        document.getElementById("dynamicFields").innerHTML = data.fields;
+    }
+}
+
+function extractDynamicDonationFields() {
+    const container = document.getElementById("dynamicFields");
+    if (!container) return {};
+
+    const details = {};
+    const inputs = container.querySelectorAll("input, select, textarea");
+
+    inputs.forEach(el => {
+        if (el.type === "radio") {
+            if (el.checked) details["Condition"] = el.parentElement.textContent.trim();
+        } else if (el.type !== "submit" && el.type !== "button") {
+            const formGroup = el.closest(".form-group");
+            const labelText = formGroup?.querySelector("label")?.innerText?.replace("*", "").trim() 
+                              || el.placeholder 
+                              || "Field";
+            details[labelText] = el.value.trim();
+        }
+    });
+
+    return details;
+}
+
+/* ================= 6. FORM SUBMISSIONS WITH SUPABASE ================= */
+
+// REGISTER
+const regForm = document.getElementById("registerForm");
+if (regForm) {
+    regForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        if (!supabaseClient) {
+            alert("Database connection is not ready. Please verify your internet connection.");
+            return;
+        }
+
+        const submitBtn = this.querySelector("button[type='submit']");
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Registering...';
+        submitBtn.disabled = true;
+
+        const name = document.getElementById("registerName").value.trim();
+        const email = document.getElementById("registerEmail").value.trim();
+        const phone = document.getElementById("registerPhone").value.trim();
+        const password = document.getElementById("registerPassword").value;
+
+        try {
+            const { data, error } = await supabaseClient.auth.signUp({
+                email: email,
+                password: password,
+                options: {
+                    data: { full_name: name, phone: phone }
+                }
+            });
+
+            if (error) throw error;
+
+            const successBox = document.getElementById("registerSuccess");
+            successBox.textContent = "Registration successful! You can now login. 💚";
+            successBox.classList.add("show");
+            regForm.reset();
+
+            setTimeout(() => {
+                successBox.classList.remove("show");
+                openPage("login");
+            }, 1500);
+        } catch (err) {
+            alert("Registration error: " + err.message);
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+// LOGIN
+const logForm = document.getElementById("loginForm");
+if (logForm) {
+    logForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        if (!supabaseClient) {
+            alert("Database connection is not ready. Please verify your internet connection.");
+            return;
+        }
+
+        const submitBtn = this.querySelector("button[type='submit']");
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
+        submitBtn.disabled = true;
+
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value;
+
+        try {
+            const { data, error } = await supabaseClient.auth.signInWithPassword({
+                email: email,
+                password: password
+            });
+
+            if (error) throw error;
+
+            const successBox = document.getElementById("loginSuccess");
+            const userName = data.user?.user_metadata?.full_name || "Supporter";
+            successBox.textContent = `Welcome back, ${userName}! 💚`;
+            successBox.classList.add("show");
+
+            setTimeout(() => {
+                successBox.classList.remove("show");
+                openPage("home");
+            }, 1200);
+        } catch (err) {
+            alert("Login failed: " + err.message);
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+// DONATION
+const donForm = document.getElementById("donationForm");
+if (donForm) {
+    donForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        if (!supabaseClient) {
+            alert("Database connection is not ready. Please verify your internet connection.");
+            return;
+        }
+
+        const submitBtn = this.querySelector("button[type='submit']");
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+        submitBtn.disabled = true;
+
+        const donorName = document.getElementById("donorName").value.trim();
+        const donorPhone = document.getElementById("donorPhone").value.trim();
+        const donorEmail = document.getElementById("donorEmail")?.value.trim() || null;
+        const notes = document.getElementById("donorNotes")?.value.trim() || "";
+        const details = extractDynamicDonationFields();
+
+        const { data: { user } } = await supabaseClient.auth.getUser();
+
+        try {
+            const { error } = await supabaseClient.from("donations").insert([{
+                donor_name: donorName,
+                donor_phone: donorPhone,
+                donor_email: donorEmail,
+                donation_type: currentDonation,
+                details: details,
+                notes: notes,
+                user_id: user ? user.id : null
+            }]);
+
+            if (error) throw error;
+
+            const successBox = document.getElementById("donationSuccess");
+            successBox.classList.add("show");
+            donForm.reset();
+            selectDonation(currentDonation, document.querySelector(".donation-tabs button.active"));
+
+            setTimeout(() => {
+                successBox.classList.remove("show");
+            }, 5000);
+        } catch (err) {
+            alert("Donation error: " + err.message);
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+// VOLUNTEER
+const volForm = document.getElementById("volunteerForm");
+if (volForm) {
+    volForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        if (!supabaseClient) {
+            alert("Database connection is not ready. Please verify your internet connection.");
+            return;
+        }
+
+        const submitBtn = this.querySelector("button[type='submit']");
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+        submitBtn.disabled = true;
+
+        const inputs = this.querySelectorAll("input, select, textarea");
+        const fullName = inputs[0]?.value.trim();
+        const email = inputs[1]?.value.trim();
+        const phone = inputs[2]?.value.trim();
+        const helpArea = this.querySelector("select")?.value;
+        const message = this.querySelector("textarea")?.value.trim() || "";
+
+        const { data: { user } } = await supabaseClient.auth.getUser();
+
+        try {
+            const { error } = await supabaseClient.from("volunteers").insert([{
+                full_name: fullName,
+                email: email,
+                phone: phone,
+                help_area: helpArea,
+                message: message,
+                user_id: user ? user.id : null
+            }]);
+
+            if (error) throw error;
+
+            const successBox = document.getElementById("volunteerSuccess");
+            successBox.classList.add("show");
+            volForm.reset();
+
+            setTimeout(() => {
+                successBox.classList.remove("show");
+            }, 5000);
+        } catch (err) {
+            alert("Volunteer error: " + err.message);
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+// CONTACT
+const contForm = document.getElementById("contactForm");
+if (contForm) {
+    contForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        if (!supabaseClient) {
+            alert("Database connection is not ready. Please verify your internet connection.");
+            return;
+        }
+
+        const submitBtn = this.querySelector("button[type='submit']");
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+
+        const inputs = this.querySelectorAll("input");
+        const name = inputs[0]?.value.trim();
+        const email = inputs[1]?.value.trim();
+        const subject = inputs[2]?.value.trim();
+        const message = this.querySelector("textarea")?.value.trim();
+
+        try {
+            const { error } = await supabaseClient.from("contact_messages").insert([{
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            }]);
+
+            if (error) throw error;
+
+            const successBox = document.getElementById("contactSuccess");
+            successBox.classList.add("show");
+            contForm.reset();
+
+            setTimeout(() => {
+                successBox.classList.remove("show");
+            }, 5000);
+        } catch (err) {
+            alert("Contact error: " + err.message);
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+// FEEDBACK POPUP
+function openFeedback(){
+    const popup = document.getElementById("feedbackPopup");
+    if (popup) popup.classList.add("show");
+}
+
+function closeFeedback(){
+    const popup = document.getElementById("feedbackPopup");
+    if (popup) popup.classList.remove("show");
+}
+
+const fbPopup = document.getElementById("feedbackPopup");
+if (fbPopup) {
+    fbPopup.addEventListener("click", function(e){
+        if(e.target === this) closeFeedback();
+    });
+}
+
+const fbForm = document.getElementById("feedbackForm");
+if (fbForm) {
+    fbForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        if (!supabaseClient) {
+            alert("Database connection is not ready. Please verify your internet connection.");
+            return;
+        }
+
+        const submitBtn = this.querySelector("button[type='submit']");
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+        submitBtn.disabled = true;
+
+        const name = this.querySelector("input[type='text']")?.value.trim();
+        const rating = this.querySelector("select")?.value;
+        const message = this.querySelector("textarea")?.value.trim();
+
+        try {
+            const { error } = await supabaseClient.from("feedback").insert([{
+                name: name,
+                rating: rating,
+                feedback: message
+            }]);
+
+            if (error) throw error;
+
+            const successBox = document.getElementById("feedbackSuccess");
+            successBox.classList.add("show");
+            fbForm.reset();
+
+            setTimeout(() => {
+                closeFeedback();
+                successBox.classList.remove("show");
+            }, 2000);
+        } catch (err) {
+            alert("Feedback error: " + err.message);
+        } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+/* ================= 7. INITIAL PAGE LOAD ================= */
+const firstDonationTab = document.querySelector(".donation-tabs button");
+if (firstDonationTab) {
+    selectDonation("food", firstDonationTab);
+}
+openPage("home");
+</script>
+</body>
+</html>
